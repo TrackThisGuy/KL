@@ -40,6 +40,3 @@ if arguments.windows:
 
 if arguments.linux:
     compile_for_linux(arguments.out)
-
-print("\n\n[***] Don't forget to allow less secure applications in your Gmail account.")
-print("Use the following link to do so https://myaccount.google.com/lesssecureapps")
